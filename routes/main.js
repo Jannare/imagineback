@@ -2,16 +2,16 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
-const pool = require('./db');
+// const pool = require('./db');
 const { getAllMedia } = require('./google-photos');
 
 let token = ""; // Initialize the token variable
 
 // Fetch OAuth credentials from the database
-async function getOAuthCredentials() {
-    const [rows] = await pool.query('SELECT client_id, client_secret, redirect_uri FROM oauth_credentials LIMIT 1');
-    return rows[0];
-}
+// async function getOAuthCredentials() {
+//     const [rows] = await pool.query('SELECT client_id, client_secret, redirect_uri FROM oauth_credentials LIMIT 1');
+//     return rows[0];
+// }
 
 // Route to start the login process
 router.get('/', async (req, res) => {
