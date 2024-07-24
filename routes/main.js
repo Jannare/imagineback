@@ -18,8 +18,8 @@ router.get('/', async (req, res) => {
     const credentials = await getOAuthCredentials();
 
     let url = 'https://accounts.google.com/o/oauth2/v2/auth';
-    url += `?client_id=${credentials.client_id}`;
-    url += `&redirect_uri=${credentials.redirect_uri}`;
+    // url += `?client_id=${credentials.client_id}`;
+    // url += `&redirect_uri=${credentials.redirect_uri}`;
     url += '&response_type=code';
     // Add Google Photos API scope
     url += '&scope=email profile https://www.googleapis.com/auth/photoslibrary.readonly openid';
