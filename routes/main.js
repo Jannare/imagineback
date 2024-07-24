@@ -15,7 +15,7 @@ let token = ""; // Initialize the token variable
 
 // Route to start the login process
 router.get('/', async (req, res) => {
-    const credentials = await getOAuthCredentials();
+    // const credentials = await getOAuthCredentials();
 
     let url = 'https://accounts.google.com/o/oauth2/v2/auth';
     // url += `?client_id=${credentials.client_id}`;
