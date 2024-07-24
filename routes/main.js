@@ -66,10 +66,10 @@ router.get('/redirect', async (req, res) => {
         console.log("token:", token);
 
         // Insert user info and access token into the database
-        await pool.query(
-            'INSERT INTO users (google_id, name, email, access_token) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE name=?, email=?, access_token=?',
-            [id, name, email, access_token, name, email, access_token]
-        );
+        // await pool.query(
+        //     'INSERT INTO users (google_id, name, email, access_token) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE name=?, email=?, access_token=?',
+        //     [id, name, email, access_token, name, email, access_token]
+        // );
 
         // Send user info and access token as JSON response
         res.json({ id, name, email, access_token });
